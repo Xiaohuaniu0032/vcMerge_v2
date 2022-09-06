@@ -54,7 +54,9 @@ class vcMerge_v2(IonPlugin):
     self.merge()
     with open("variantCallerMerge_block.html","w") as f:
       f.write('<html><body>To download: "Right Click" -> "Save Link As..."<br>\n')
-      for merge_vcf in glob.glob('*.merged.vcf.xls'):
+      xls_all = glob.glob("*.merged.vcf.xls")
+      xls_all_sort = xls_all.sort()
+      for merge_vcf in xls_all_sort:
         print(merge_vcf)
         f.write('<a href="%s">%s</a><br>\n'
                 % (os.path.join(net_location,url_path,merge_vcf),merge_vcf))
