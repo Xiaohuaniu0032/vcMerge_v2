@@ -5,7 +5,7 @@
 
 # This has been tested only on S5XL, S5 Prime with 5.10 and 5.12. 
 
-import common
+#import common
 import glob
 import sys
 import subprocess
@@ -18,7 +18,7 @@ from ion.plugin import *
 # 2022-9-5
 
 class vcMerge_v2(IonPlugin):
-  version = '1.0.0.0'
+  version = "1.1.0.0"
   envDict = dict(os.environ)
   author = "longfei.fu@thermofisher.com"
   runtypes = [RunType.FULLCHIP, RunType.THUMB, RunType.COMPOSITE]
