@@ -43,7 +43,7 @@ for my $dir (@{$vc_dirs_aref}){
 			next if ($arr[4] ne "Homozygous" and $arr[4] ne "Heterozygous");
 			
 			my $var = "$arr[0]\:$arr[1]\:$arr[2]\:$arr[3]"; # 2019-nCoV:210:G:T
-			$sample_vars{$barcode}{$var} = "$freq\|$ori_cov";
+			$sample_vars{$barcode}{$var} = "$freq\ | $ori_cov";
 			push @{$all_vars{$pos}}, $var; # 1) one pos may has diff variants; 2) may contain dup vars
 		}
 		close VCF;
